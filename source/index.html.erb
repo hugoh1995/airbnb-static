@@ -8,3 +8,131 @@ title: Le Wagon Middleman boilerplate
     <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
   </p>
 </div>
+
+    <div class="banner">
+      <div class="banner-content">
+        <h1>WELCOME HOME</h1>
+        <p>Rent unique places to stay from local hosts in 190+ countries.</p>
+        <form action="#" class="form-inline">
+          <input type="text" class="form-control input-lg" placeholder="checkin">
+          <input type="text" class="form-control input-lg" placeholder="checkout">
+          <select class="form-control input-lg">
+            <option value="1">1 person</option>
+            <option value="2">2 persons</option>
+            <option value="3">3 persons</option>
+          </select>
+          <input type="submit" class="btn btn-primary btn-lg" value="Search">
+        </form>
+      </div>
+    </div>
+
+    <!-- Your features code -->
+    <div class="wrapper features">
+      <div class="container" class="text-center">
+        <div class="row">
+          <div class="col-xs-1 col-sm-3">
+            <img src="images/globe.png" alt="discover"/>
+            <h3>Discover the world</h3>
+            <p class="description">The earth is your new home.</p>
+          </div>
+          <div class="col-xs-1 col-sm-3">
+            <img src="images/dollar.png" alt="pay"/>
+            <h3>Pay online</h3>
+            <p class="description">No cash issues anymore.</p>
+          </div>
+          <div class="col-xs-1 col-sm-3">
+            <img src="images/beer.png" alt="culture"/>
+            <h3>Meet people</h3>
+            <p class="description">Discover new culture and lifestyle.</p>
+          </div>
+          <div class="col-xs-1 col-sm-3">
+            <img src="images/heart.png" alt="culture"/>
+            <h3>Share and love</h3>
+            <p class="description">Join a community you will love.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your cards code -->
+    <div class="wrapper-grey">
+        <div class="container">
+          <h3>Your next trip</h3>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <!-- insert <div class="card"> -->
+              <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), <%= image_path "card-paris.jpeg" %>">
+                <div class="card-category">Paris</div>
+                <div class="card-description">
+                  <h2>Seb's home</h2>
+                  <p>Charming room with patio</p>
+                </div>
+                <%= image_tag "anne.jpg", class: "card-user avatar avatar-large" %>
+                <%= link_to "Seb's Home", "#", class: "card-link" %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+            <!-- insert <div class="card"> -->
+              <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), <%= image_path "card-brussels.jpeg" %>">
+                <div class="card-category">Brussels</div>
+                <div class="card-description">
+                  <h2>Anne's home</h2>
+                  <p>Lovely house</p>
+                </div>
+                <%= image_tag "seb.jpg", class: "card-user avatar avatar-large" %>
+                <%= link_to "Anne's Home", "#", class: "card-link" %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+            <!-- insert <div class="card"> -->
+              <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), <%= image_path "card-london.jpeg" %>">
+                <div class="card-category">London</div>
+                <div class="card-description">
+                  <h2>Romain's home</h2>
+                  <p>Nice place in Picadilly</p>
+                </div>
+                <%= image_tag "romain.jpeg", class: "card-user avatar avatar-large" %>
+                <%= link_to "Romain's Home", "#", class: "card-link" %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Your newsletter code -->
+    <div class="wrapper newsletter">
+      <div class="container" class="text-center">
+        <div class="row">
+          <div class="col-sm-offset-4 col-sm-4">
+            <form class="form-inline">
+              <h3>Get news from us</h3>
+              <p>Leave us your mail and get news from us</p>
+              <input type='email' class="form-control" placeholder="alan@turing.com">
+              <input type='submit' value="Suscribe" class="btn btn-primary">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your Map code -->
+    <div id="map" style="width: 100%; height: 400px;"></div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [] // TODO: replace [] by array from https://snazzymaps.com/
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+    </script>
