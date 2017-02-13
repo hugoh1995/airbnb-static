@@ -9,14 +9,12 @@
 
 .social-networks {
   margin: 20px;
-}
-
-.social-networks i {
-  font-size: 20pt;
-  color: white;
-  padding: 10px;
-}
-
-.social-networks i:hover {
-  color: yellow;
+  i{
+    font-size: 20pt;
+    color: white;
+    padding: 10px;
+    &:hover {
+      color: yellow;
+    }
+  }
 }
