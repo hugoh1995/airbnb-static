@@ -1,8 +1,12 @@
-<ul class="list-inline text-center">
-  <% ["buddy-1", "buddy-2"].each do |member| %>
-    <li>
-      <%= image_tag "#{member}.png", class: "img-circle" %>
-      <h3><%= member.capitalize %></h3>
-    </li>
-  <% end %>
-</ul>
+<div class="container text-center marged">
+  <h1 class="page-title">The team</h1>
+  <ul class="list-inline marged">
+    <% ["buddy-1", "buddy-2"].each do |member| %>
+      <li>
+        <%= image_tag "#{member}.png", class: "img-circle marged" %>
+        <h3><%= member.capitalize %></h3>
+      </li>
+    <% end %>
+  </ul>
+  <%= link_to "Meet the team", "team.html", class: "btn btn-primary" %>
+</div>
